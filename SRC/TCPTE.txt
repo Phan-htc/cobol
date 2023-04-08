@@ -1,0 +1,46 @@
+      ******************************************************************
+      * DCLGEN TABLE(TCPTE)                                            *
+      *        LIBRARY(ARISYS.ADREF.XV99R00.CPY(TCPTE))                *
+      *        ACTION(REPLACE)                                         *
+      *        LANGUAGE(COBOL)                                         *
+      *        NAMES(N)                                                *
+      *        QUOTE                                                   *
+      *        LABEL(YES)                                              *
+      *        COLSUFFIX(YES)                                          *
+      *        INDVAR(YES)                                             *
+      * ... IS THE DCLGEN COMMAND THAT MADE THE FOLLOWING STATEMENTS   *
+      ******************************************************************
+           EXEC SQL DECLARE TCPTE TABLE
+           ( FCPTE_CPTE                     CHAR(10) NOT NULL,
+             FCPTE_NOM                      CHAR(20) NOT NULL,
+             FCPTE_DCREA                    INTEGER,
+             FCPTE_SOLDE                    DECIMAL(10, 2),
+             FCPTE_DMAJ                     INTEGER
+           ) END-EXEC.
+      ******************************************************************
+      * COBOL DECLARATION FOR TABLE TCPTE                              *
+      ******************************************************************
+       01  DCLTCPTE.
+      *    *************************************************************
+      *                       FCPTE_CPTE
+           10 NFCPTE-CPTE          PIC X(10).
+      *    *************************************************************
+      *                       FCPTE_NOM
+           10 NFCPTE-NOM           PIC X(20).
+      *    *************************************************************
+      *                       FCPTE_DCREA
+           10 NFCPTE-DCREA         PIC S9(9) USAGE COMP.
+      *    *************************************************************
+      *                       FCPTE_SOLDE
+           10 NFCPTE-SOLDE         PIC S9(8)V9(2) USAGE COMP-3.
+      *    *************************************************************
+      *                       FCPTE_DMAJ
+           10 NFCPTE-DMAJ          PIC S9(9) USAGE COMP.
+      ******************************************************************
+      * INDICATOR VARIABLE STRUCTURE                                   *
+      ******************************************************************
+       01  ITCPTE.
+           10 INDSTRUC           PIC S9(4) USAGE COMP OCCURS 5 TIMES.
+      ******************************************************************
+      * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 5       *
+      ******************************************************************

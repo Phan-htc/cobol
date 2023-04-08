@@ -1,0 +1,24 @@
+      ******************************************************************
+      * DCLGEN TABLE(ARI0409.TDEPART)                                  *
+      *        LIBRARY(ARI04.ARI0409.CPY(TDEPART))                     *
+      *        ACTION(REPLACE)                                         *
+      *        LANGUAGE(COBOL)                                         *
+      *        STRUCTURE(DCLTDEPART)                                   *
+      *        QUOTE                                                   *
+      * ... IS THE DCLGEN COMMAND THAT MADE THE FOLLOWING STATEMENTS   *
+      ******************************************************************
+           EXEC SQL DECLARE TDEPART TABLE                                      ?
+           ( CDNUMDEP                       CHAR(2) NOT NULL,
+             LBNOMDEP                       CHAR(23) NOT NULL,
+             CDNUMREG                       CHAR(2) NOT NULL
+           ) END-EXEC.
+      ******************************************************************
+      * COBOL DECLARATION FOR TABLE ARI0409.TDEPART                    *
+      ******************************************************************
+       01  DCLTDEPART.
+           10 CDNUMDEP             PIC X(2).
+           10 LBNOMDEP             PIC X(23).
+           10 CDNUMREG             PIC X(2).
+      ******************************************************************
+      * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 3       *
+      ******************************************************************

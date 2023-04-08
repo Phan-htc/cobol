@@ -1,0 +1,22 @@
+      ******************************************************************
+      * DCLGEN TABLE(ARI0409.TREGION)                                  *
+      *        LIBRARY(ARI04.ARI0409.CPY(TREGION))                     *
+      *        ACTION(REPLACE)                                         *
+      *        LANGUAGE(COBOL)                                         *
+      *        STRUCTURE(DCLTREGION)                                   *
+      *        QUOTE                                                   *
+      * ... IS THE DCLGEN COMMAND THAT MADE THE FOLLOWING STATEMENTS   *
+      ******************************************************************
+           EXEC SQL DECLARE TREGION TABLE                                      ?
+           ( CDNUMREG                       CHAR(2) NOT NULL,
+             LBNOMREG                       CHAR(26) NOT NULL
+           ) END-EXEC.
+      ******************************************************************
+      * COBOL DECLARATION FOR TABLE ARI0409.TREGION                    *
+      ******************************************************************
+       01  DCLTREGION.
+           10 CDNUMREG             PIC X(2).
+           10 LBNOMREG             PIC X(26).
+      ******************************************************************
+      * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 2       *
+      ******************************************************************

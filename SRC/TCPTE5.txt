@@ -1,0 +1,39 @@
+      ******************************************************************
+      * DCLGEN TABLE(TCPTE5)                                           *
+      *        LIBRARY(ARI04.ARI0409.CPY(TCPTE5))                      *
+      *        LANGUAGE(COBOL)                                         *
+      *        NAMES(SQ-)                                              *
+      *        QUOTE                                                   *
+      *        COLSUFFIX(YES)                                          *
+      *        INDVAR(YES)                                             *
+      * ... IS THE DCLGEN COMMAND THAT MADE THE FOLLOWING STATEMENTS   *
+      ******************************************************************
+           EXEC SQL DECLARE TCPTE5 TABLE
+           ( CPTCPTE                        CHAR(10) NOT NULL,
+             CPTNOM                         CHAR(14) NOT NULL,
+             CPTDCREA                       DATE NOT NULL,
+             SOLDE                          DECIMAL(10, 2) NOT NULL,
+             CPTDMAJ                        DATE NOT NULL
+           ) END-EXEC.
+      ******************************************************************
+      * COBOL DECLARATION FOR TABLE TCPTE5                             *
+      ******************************************************************
+       01  DCLTCPTE5.
+      *                       CPTCPTE
+           10 SQ-CPTCPTE           PIC X(10).
+      *                       CPTNOM
+           10 SQ-CPTNOM            PIC X(14).
+      *                       CPTDCREA
+           10 SQ-CPTDCREA          PIC X(10).
+      *                       SOLDE
+           10 SQ-SOLDE             PIC S9(8)V9(2) USAGE COMP-3.
+      *                       CPTDMAJ
+           10 SQ-CPTDMAJ           PIC X(10).
+      ******************************************************************
+      * INDICATOR VARIABLE STRUCTURE                                   *
+      ******************************************************************
+       01  ITCPTE5.
+           10 INDSTRUC           PIC S9(4) USAGE COMP OCCURS 5 TIMES.
+      ******************************************************************
+      * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 5       *
+      ******************************************************************

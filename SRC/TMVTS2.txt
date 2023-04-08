@@ -1,0 +1,40 @@
+      ******************************************************************
+      * DCLGEN TABLE(MVTS)                                             *
+      *        LIBRARY(ARI04.ARI0409.CPY(TMVTS2))                      *
+      *        LANGUAGE(COBOL)                                         *
+      *        NAMES(SQ-)                                              *
+      *        QUOTE                                                   *
+      *        COLSUFFIX(YES)                                          *
+      *        INDVAR(YES)                                             *
+      * ... IS THE DCLGEN COMMAND THAT MADE THE FOLLOWING STATEMENTS   *
+      ******************************************************************
+           EXEC SQL DECLARE MVTS TABLE
+           ( MVTSCPT                        CHAR(10) NOT NULL,
+             MVTSDATE                       DATE NOT NULL,
+             MVTSCODE                       VARCHAR(1) NOT NULL,
+             MVTSMT                         DECIMAL(11, 2)
+           ) END-EXEC.
+      ******************************************************************
+      * COBOL DECLARATION FOR TABLE MVTS                               *
+      ******************************************************************
+       01  DCLMVTS.
+      *                       MVTSCPT
+           10 SQ-MVTSCPT           PIC X(10).
+      *                       MVTSDATE
+           10 SQ-MVTSDATE          PIC X(10).
+           10 SQ-MVTSCODE.
+      *                       MVTSCODE LENGTH
+              49 SQ-MVTSCODE-LEN   PIC S9(4) USAGE COMP.
+      *                       MVTSCODE
+              49 SQ-MVTSCODE-TEXT
+                 PIC X(1).
+      *                       MVTSMT
+           10 SQ-MVTSMT            PIC S9(9)V9(2) USAGE COMP-3.
+      ******************************************************************
+      * INDICATOR VARIABLE STRUCTURE                                   *
+      ******************************************************************
+       01  IMVTS.
+           10 INDSTRUC           PIC S9(4) USAGE COMP OCCURS 4 TIMES.
+      ******************************************************************
+      * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 4       *
+      ******************************************************************

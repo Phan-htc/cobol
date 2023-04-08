@@ -1,0 +1,54 @@
+      ******************************************************************
+      * DCLGEN TABLE(ARI0409.TPARGEN)                                  *
+      *        LIBRARY(ARI04.ARI0409.CPY(TPARGEN))                     *
+      *        ACTION(REPLACE)                                         *
+      *        LANGUAGE(COBOL)                                         *
+      *        STRUCTURE(DCLTPARGEN)                                   *
+      *        QUOTE                                                   *
+      * ... IS THE DCLGEN COMMAND THAT MADE THE FOLLOWING STATEMENTS   *
+      ******************************************************************
+           EXEC SQL DECLARE TPARGEN TABLE                                      ?
+           ( CDTYPPAR                       CHAR(6) NOT NULL,
+             CDID1PAR                       CHAR(8) NOT NULL,
+             CDID2PAR                       CHAR(8) NOT NULL,
+             CDID3PAR                       CHAR(8) NOT NULL,
+             DTDEBPAR                       DATE NOT NULL,
+             DTFINPAR                       DATE NOT NULL,
+             LBNO1PAR                       CHAR(30),
+             LBNO2PAR                       CHAR(30),
+             LBNO3PAR                       CHAR(30),
+             QTNO1PAR                       DECIMAL(13, 4),
+             QTNO2PAR                       DECIMAL(13, 4),
+             QTNO3PAR                       DECIMAL(13, 4),
+             IDCREPAR                       CHAR(8) NOT NULL,
+             DTCREPAR                       DATE NOT NULL,
+             HHCREPAR                       TIME NOT NULL,
+             IDMODPAR                       CHAR(8) NOT NULL,
+             DTMODPAR                       DATE NOT NULL,
+             HHMODPAR                       TIME NOT NULL
+           ) END-EXEC.
+      ******************************************************************
+      * COBOL DECLARATION FOR TABLE ARI0409.TPARGEN                    *
+      ******************************************************************
+       01  DCLTPARGEN.
+           10 CDTYPPAR             PIC X(6).
+           10 CDID1PAR             PIC X(8).
+           10 CDID2PAR             PIC X(8).
+           10 CDID3PAR             PIC X(8).
+           10 DTDEBPAR             PIC X(10).
+           10 DTFINPAR             PIC X(10).
+           10 LBNO1PAR             PIC X(30).
+           10 LBNO2PAR             PIC X(30).
+           10 LBNO3PAR             PIC X(30).
+           10 QTNO1PAR             PIC S9(9)V9(4) USAGE COMP-3.
+           10 QTNO2PAR             PIC S9(9)V9(4) USAGE COMP-3.
+           10 QTNO3PAR             PIC S9(9)V9(4) USAGE COMP-3.
+           10 IDCREPAR             PIC X(8).
+           10 DTCREPAR             PIC X(10).
+           10 HHCREPAR             PIC X(8).
+           10 IDMODPAR             PIC X(8).
+           10 DTMODPAR             PIC X(10).
+           10 HHMODPAR             PIC X(8).
+      ******************************************************************
+      * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 18      *
+      ******************************************************************

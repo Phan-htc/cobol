@@ -1,0 +1,34 @@
+      *--------------------------------------------------------*
+      * DEFINITION DES VARIABLES DU FICHIER SYSIN              *
+      *--------------------------------------------------------*
+      *
+?      01  WS-ENRG-SYSIN.
+           88  FIN-SYSIN                VALUE '$$$'.
+           05  WS-DEM-TYP               PIC X.
+               88 TYPE-A                VALUE 'A'.
+               88 TYPE-B                VALUE 'B'.
+           05  FILLER                   PIC X(79)
+                                        VALUE SPACES.
+      *
+       01  WS-ENRG-A REDEFINES WS-ENRG-SYSIN.
+           05  FILLER                   PIC X.
+           05  WS-DEM-NOM               PIC X(14).
+               88 NOM-DEM-EMPTY         VALUE SPACES.
+           05  WS-DEM-CPT-DEB           PIC X(10).
+           05  WS-DEM-CPT-DEB-X         REDEFINES WS-DEM-CPT-DEB
+                                        PIC X(10).
+               88 CPT-DEB-EMPTY         VALUE SPACES.
+           05  WS-DEM-CPT-FIN           PIC X(10).
+           05  WS-DEM-CPT-FIN-X         REDEFINES WS-DEM-CPT-FIN
+                                        PIC X(10).
+               88 CPT-FIN-EMPTY         VALUE SPACES.
+           05  FILLER                   PIC X(45).
+      *
+       01  WS-ENRG-B REDEFINES WS-ENRG-SYSIN.
+           05  FILLER                   PIC X.
+           05  FILLER                   PIC X(14).
+           05  WS-DEM-CLI-DEB           PIC X(20).
+               88 CLI-DEB-EMPTY         VALUE SPACES.
+           05  WS-DEM-CLI-FIN           PIC X(20).
+               88 CLI-FIN-EMPTY         VALUE SPACES.
+           05  FILLER                   PIC X(25).

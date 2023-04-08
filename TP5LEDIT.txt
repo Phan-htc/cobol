@@ -1,0 +1,136 @@
+      *----------------------------------------------------------*
+      * DESCRIPTION D'ETAT EST UTILISEE POUR LE TP COBOL N°5     *
+      *----------------------------------------------------------*
+      * DEFINITION DES ZONES D'EDITION DE L'ETAT CLIENT *
+      *-------------------------------------------------*
+       01  WS-LETAT-TIRET.
+           05 FILLER                PIC X     VALUE  '!'.
+           05 FILLER                PIC X(76) VALUE ALL '-'.
+           05 FILLER                PIC X     VALUE  '!'.
+      *
+       01  WS-LETAT-ENTETE.
+           05 FILLER                PIC X     VALUE '!'.
+           05 FILLER                PIC X(13) VALUE ' DEMANDEUR : '.
+           05 WS-LETAT-NOMD-ED      PIC X(20).
+           05 FILLER                PIC X(4)  VALUE SPACES.
+           05 FILLER                PIC X(13) VALUE 'N° DEMANDE : '.
+           05 WS-LETAT-NUM-ED       PIC Z9.
+           05 FILLER                PIC X(10) VALUE SPACES.
+           05 FILLER                PIC X(7)  VALUE 'PAGE : '.
+           05 WS-LETAT-PAGE-ED      PIC ZZ9.
+           05 FILLER                PIC X(5)  VALUE '    !'.
+      *
+       01  WS-LETAT-BLANC.
+           05 FILLER                PIC X     VALUE '!'.
+           05 FILLER                PIC X(76) VALUE SPACES.
+           05 FILLER                PIC X     VALUE '!'.
+      *
+       01  WS-LETAT-TITRE.
+           05 FILLER                PIC X     VALUE '!'.
+           05 FILLER                PIC X(20) VALUE SPACES.
+           05 FILLER                PIC X(10) VALUE 'LISTE DES '.
+           05 FILLER                PIC X(12) VALUE 'COMPTES PAR '.
+           05 WS-LETAT-TYPE-ED      PIC X(17).
+           05 FILLER                PIC X(17) VALUE SPACES.
+           05 FILLER                PIC X     VALUE '!'.
+      *
+       01  WS-LETAT-REFDEB.
+           05 FILLER                PIC X(2)  VALUE '! '.
+           05 FILLER                PIC X(10) VALUE 'REFERENCE '.
+           05 FILLER                PIC X(8)  VALUE 'DEBUT : '.
+           05 WS-LETAT-REFDEB-ED    PIC X(20).
+           05 FILLER                PIC X(37) VALUE SPACES.
+           05 FILLER                PIC X     VALUE '!'.
+      *
+       01  WS-LETAT-REFFIN.
+           05 FILLER                PIC X(2)  VALUE '! '.
+           05 FILLER                PIC X(10) VALUE 'REFERENCE '.
+           05 FILLER                PIC X(8)  VALUE 'FIN   : '.
+           05 WS-LETAT-REFFIN-ED    PIC X(20).
+           05 FILLER                PIC X(37) VALUE SPACES.
+           05 FILLER                PIC X     VALUE '!'.
+      *
+       01  WS-LETAT-INTITULE.
+           05 FILLER                PIC X(2)  VALUE '! '.
+           05 FILLER                PIC X(13) VALUE 'NUMERO COMPTE'.
+           05 FILLER                PIC X(3)  VALUE SPACES.
+           05 FILLER                PIC X(8)  VALUE 'CREATION'.
+           05 FILLER                PIC X(7)  VALUE SPACES.
+           05 FILLER                PIC X(5)  VALUE 'M-A-J'.
+           05 FILLER                PIC X(7)  VALUE SPACES.
+           05 FILLER                PIC X(5)  VALUE 'SOLDE'.
+           05 FILLER                PIC X(10) VALUE SPACES.
+           05 FILLER                PIC X(10) VALUE 'NOM CLIENT'.
+           05 FILLER                PIC X(7)  VALUE SPACES.
+           05 FILLER                PIC X     VALUE '!'.
+      *
+       01  WS-LETAT-DETAIL.
+           05 FILLER                PIC X     VALUE '!'.
+           05 FILLER                PIC X(3)  VALUE SPACES.
+           05 WS-LETAT-NUMCPT-ED    PIC X(10).
+           05 FILLER                PIC X(4)  VALUE SPACES.
+           05 WS-LETAT-DCREA-JJ-ED  PIC 99.
+           05 FILLER                PIC X     VALUE '/'.
+           05 WS-LETAT-DCREA-MM-ED  PIC 99.
+           05 FILLER                PIC X     VALUE '/'.
+           05 WS-LETAT-DCREA-SS-ED  PIC 99.
+           05 WS-LETAT-DCREA-AA-ED  PIC 99.
+           05 FILLER                PIC X(2)  VALUE SPACES.
+           05 WS-LETAT-DMAJ-JJ-ED   PIC 99.
+           05 FILLER                PIC X     VALUE '/'.
+           05 WS-LETAT-DMAJ-MM-ED   PIC 99.
+           05 FILLER                PIC X     VALUE '/'.
+           05 WS-LETAT-DMAJ-SS-ED   PIC 99.
+           05 WS-LETAT-DMAJ-AA-ED   PIC 99.
+           05 FILLER                PIC X(3)  VALUE SPACES.
+           05 WS-LETAT-SOLDE-ED     PIC +++++++9,99 VALUE ZERO.
+           05 FILLER                PIC X(2)  VALUE SPACES.
+           05 WS-LETAT-NOMC-ED      PIC X(20).
+           05 FILLER                PIC X(2)  VALUE ' !'.
+      *
+      *---------------------------------------------------*
+      * DEFINITION DES ZONES D'EDITION DE L'ETAT ANOMALIE *
+      *---------------------------------------------------*
+       01  WS-LANO-ASTER            PIC X(62) VALUE ALL '*'.
+       01  WS-LANO-TITRE.
+           05 FILLER                PIC X(16) VALUE '*'.
+           05 FILLER                PIC X(45) VALUE
+                                      'LISTE DES ANOMALIES DE DEMANDE'.
+           05 FILLER                PIC X     VALUE '*'.
+      *
+       01  WS-LANO-ERREUR.
+           05 FILLER                PIC X(10) VALUE '*  ERREUR'.
+           05 WS-LANO-NUM-ED        PIC 9(2).
+           05 FILLER                PIC X(3)  VALUE ' :'.
+           05 WS-LANO-TYP-ED        PIC X(44).
+           05 FILLER                PIC X(3)  VALUE '  *'.
+      *
+       01  WS-LANO-ENR1.
+           05 FILLER                PIC X(61) VALUE
+                                        '*  ENREGISTREMENT :'.
+           05 FILLER                PIC X     VALUE '*'.
+      *
+       01  WS-LANO-ENR2.
+           05 FILLER                PIC X(3)  VALUE '* '.
+           05 WS-LANO-ENR-ED        PIC X(56) VALUE SPACES.
+           05 FILLER                PIC X(3)  VALUE '  *'.
+      *
+       01  WS-LANO-INTERL.
+           05 FILLER                PIC X(61) VALUE '*'.
+           05 FILLER                PIC X     VALUE '*'.
+      *---------------------------------------------------*
+      * DEFINITION DES ZONES D'EDITION DE FIN D'EXECUTION *
+      *---------------------------------------------------*
+       01  WS-LCRE-TITRE.
+           05 FILLER                PIC X(45)  VALUE
+                     '*    COMPTE-RENDU D''EXECUTION (ARID549)     *'.
+      *
+       01  WS-LCRE-ASTER.
+           05 FILLER                PIC X(45)  VALUE ALL '*'.
+      *
+       01  WS-LCRE-DETAIL.
+           05 FILLER                PIC X(3)   VALUE '*'.
+           05 WS-LCRE-DET-LIB-ED    PIC X(30)  VALUE SPACES.
+           05 FILLER                PIC X(3)   VALUE ':'.
+           05 WS-LCRE-DET-TOT-ED    PIC ZZZZZ9.
+           05 FILLER                PIC X(3)   VALUE '  *'.
