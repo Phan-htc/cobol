@@ -3,8 +3,8 @@
       *---------------------------------------------------------------*
       *  NOM DU PROGRAMME : ARIO149                                   *
       *  NOM DU REDACTEUR : PHAN                                      *
-      *  SOCIETE          : ESTIAC                                    *
-      *  DATE DE CREATION : 01/02/2023                                *
+      *  SOCIETE          : TRICOPHO                                  *
+      *  DATE DE CREATION : --/--/----                                *
       *---------------------------------------------------------------*
       *--               OBJECTIFS GENERAUX DU PROGRAMME             --*
       *---------------------------------------------------------------*

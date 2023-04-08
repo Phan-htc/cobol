@@ -3,8 +3,8 @@
       *----------------------------------------------------------------*
       *  NOM DU PROGRAMME : BASE                                       *
       *  NOM DU REDACTEUR : MOI                                        *
-      *  SOCIETE          : CHEZ MOI                                   *
-      *  DATE DE CREATION : 05/02/2023                                 *
+      *  SOCIETE          : TRICOPHO                                  *
+      *  DATE DE CREATION : --/--/----                                *
       *----------------------------------------------------------------*
       *--                  OBJECTIFS GENERAUX DU PROGRAMME           --*
       *----------------------------------------------------------------*

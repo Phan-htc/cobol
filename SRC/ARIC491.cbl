@@ -3,8 +3,8 @@
       *---------------------------------------------------------------*
       *  NOM DU PROGRAMME : ARIC491                                   *
       *  NOM DU REDACTEUR : PHAN CHARLIE                              *
-      *  SOCIETE          : ESTIAC                                    *
-      *  DATE DE CREATION : 22/03/2023                                *
+      *  SOCIETE          : TRICOPHO                                  *
+      *  DATE DE CREATION : --/--/----                                *
       *---------------------------------------------------------------*
       *--               OBJECTIFS GENERAUX DU PROGRAMME             --*
       *---------------------------------------------------------------*
